@@ -42,7 +42,7 @@ def encode_input(data):
     # One Hot Encoding
     market = ['Online', 'Offline', 'Corporate', 'Complementary','Aviation']
     for cat in market:
-        data[f'market_segment_type{cat}'] = 1 if data['market_segment_type'] == cat else 0
+        data[f'market_segment_type_{cat}'] = 1 if data['market_segment_type'] == cat else 0
     del data['market_segment_type']
 
     return data
