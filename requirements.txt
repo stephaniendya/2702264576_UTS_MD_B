@@ -3,7 +3,6 @@ pandas
 streamlit
 scikit-learn
 joblib
-xgboost
 setuptools
 wheel
 io
