@@ -20,10 +20,6 @@ with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
         model = joblib.load(f)
 
 def encode_input(data):
-    # Binary Encoding
-    book_map = {"Canceled":0, "Not_Canceled" :1}
-    data['booking_status'] = book_map.get(data['booking_status'], 0)
-
     # Label Encoding
     mealenc = {
         "Not Selected": 0,
