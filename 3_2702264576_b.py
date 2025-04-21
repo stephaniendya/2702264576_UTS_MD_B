@@ -79,7 +79,6 @@ def main():
     no_of_previous_bookings_not_canceled = st.number_input('Jumlah Pemesanan Tidak Dibatalkan Sebelumnya', min_value=0, value=0)
     avg_price_per_room = st.number_input('Harga Rata-rata per Kamar (€)', min_value=0.0, value=100.0)
     no_of_special_requests = st.number_input('Jumlah Permintaan Khusus', min_value=0, value=0)
-    booking_status = st.selectbox('Status Pemesanan', ['Canceled', 'Not_Canceled'])
 
     if st.button('Make Prediction'):
         features = {
