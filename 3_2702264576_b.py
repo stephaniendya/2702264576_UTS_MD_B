@@ -10,13 +10,14 @@ Original file is located at
 import streamlit as st
 import joblib
 import numpy as np
-import gzip
+import zipfile
 import io
 
-gz_file_path = 'rf_model_oop.pkl.gz'
+zip_file_path = 'rf_model_oop.zip'
 
-with gzip.open(gz_file_path, 'rb') as f:
-    model = joblib.load(f)
+with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
+    with zip_ref.open('rf_model.pkl') as f:
+        model = joblib.load(f)
 
 def encode_input(data):
     # Binary Encoding
