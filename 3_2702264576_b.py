@@ -16,7 +16,7 @@ import io
 zip_file_path = 'rf_model_oop.zip'
 
 with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
-    with zip_ref.open('rf_model.pkl') as f:
+    with zip_ref.open('rf_model_oop.pkl') as f:
         model = joblib.load(f)
 
 def encode_input(data):
